@@ -27,7 +27,7 @@ function App() {
       body: JSON.stringify(user),
     })
       .then((res) => res.json())
-      .then((data) => console.log('Success:', data))
+      .then((data) => setUsers([...users, data]))
       .catch((error) => console.log('Error:', error));
 
     form.reset();
